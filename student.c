@@ -302,7 +302,7 @@ void setPassFlag(Student *students, int numStudents)
 {
     for (int i = 0; i < numStudents; i++)
     {
-        int passFlag = (students[i].score >= 60);                               // 转换为0或1表示是否及格
+        int passFlag = (students[i].score >= 60);                                   // 转换为0或1表示是否及格
         students[i].score = ( students[i].score & 0xFFFFFF00) | (passFlag << 0); // 假设成绩用float存储，这里简单利用位运算将最低位置为及格标志
     }
     printf("已设置学生成绩的及格/不及格标志\n");
