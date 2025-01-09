@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -293,7 +294,7 @@ Student *readStudentsFromFile(int *numStudents, const char *filename)
                 // 处理注册时间读取失败的情况，设置一个默认值或者输出错误信息等
                 students[*numStudents].registrationTime = 0;
                 // 可以添加更多错误处理逻辑，比如记录错误日志等
-                debugPrint("读取注册时间失败，设置默认值为0\n");
+                debugPrint("读取注册时间失败,设置默认值为0\n");
             }
             (*numStudents)++;
         }
@@ -305,7 +306,7 @@ Student *readStudentsFromFile(int *numStudents, const char *filename)
 // 信号处理函数，用于处理SIGINT信号（这里简单打印提示信息并正常退出程序）
 void signal_handler(int signum)
 {
-    printf("接收到中断信号（Ctrl + C），正在安全退出程序...\n");
+    printf("接收到中断信号(Ctrl + C)正在安全退出程序...\n");
     // 释放已经分配的内存（假设全局的students指针指向了有效内存）
     if (students != NULL)
     {
